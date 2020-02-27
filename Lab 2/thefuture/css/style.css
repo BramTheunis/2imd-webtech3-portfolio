@@ -4,11 +4,13 @@ div > div
     font-family: sans-serif;
     font-weight: bolder;
     text-align: center;
-    font-size: 1.5em;
-    width: 90%;
+    font-size: 1.6em;
+    margin: 10px;
+}
+
+.grid
+{
     display: grid;
-    align-content: center;
-    margin: 1em;
 }
 
 .homework
@@ -26,3 +28,9 @@ div > div
     background-color: yellow;
 }
 
+@media (min-width: 33em){
+    .grid 
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
