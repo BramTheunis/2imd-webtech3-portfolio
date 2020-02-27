@@ -28,9 +28,33 @@ div > div
     background-color: yellow;
 }
 
-@media (min-width: 33em){
+@media (min-width: 33em) {
     .grid 
     {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 75em) {
+    .grid
+    {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .broken
+    {
+        display: grid;
+        grid-column: 3 / 4;
+        grid-row: 1 / -1;
+        align-items: center;
+    }
+    
+    .infinity
+    {
+        display: grid;
+        grid-column: 4 / -1;
+        grid-row: 2 / -1;
+        align-items: center;
     }
 }
