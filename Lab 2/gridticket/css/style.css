@@ -1,0 +1,69 @@
+.grid
+{
+    display: grid;
+    font-family: sans-serif;
+    width: 90%;
+    max-width: 20em;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.header, .date, .personAllowed, .ticketPrice
+{
+    border: 1px solid black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header
+{
+    background-color: black;
+    color: white;
+    order: reverse;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    letter-spacing: 0.2em;
+}
+
+.header h3
+{
+    font-weight: 100;
+    color: #DDDDDD;
+    font-size: 0.8em;
+    margin-top: -10px;
+}
+
+.qrcode
+{
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    background-image: url(../images/backgroundTicket.jpg);
+    background-position: center;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.qrcode img
+{
+    display: block;
+    margin: auto;
+}
+
+.ticketPrice
+{
+    grid-column: 1 / -1;
+}
+
+.footer
+{
+    display: none;
+}
+
+.date, .personAllowed, .ticketPrice
+{
+    background-color: rgb(22, 16, 16, 0.1);
+}
