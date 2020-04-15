@@ -13,13 +13,12 @@ class Note {
 
     let newA = document.createElement("a");
     newA.setAttribute("class", "card-remove");
-    newA.setAttribute("href", "#");
     newA.innerHTML = "Remove";
 
     newNote.appendChild(newP);
     newNote.appendChild(newA);
     
-    // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
+    newA.addEventListener('click', this.remove.bind(newNote));
     
     return newNote;
   }
@@ -34,11 +33,13 @@ class Note {
     // HINT🤩
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
+    localStorage.setItem("mytime", Date.now);
   }
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
+    console.log(this);
   } 
 }
 
