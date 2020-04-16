@@ -33,7 +33,7 @@ class Note {
     // HINT🤩
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
-    localStorage.setItem("mytime", Date.now);
+
   }
   
   remove(){
@@ -46,7 +46,7 @@ class Note {
 class App {
   constructor() {
     console.log("👊🏼 The Constructor!");
-  
+
     // HINT🤩
     // clicking the button should work
     // pressing the enter key should also work
@@ -70,11 +70,14 @@ class App {
     let note = new Note(text);
     note.add();
     // note.saveToStorage();
+    note.saveToStorage();
     // this.reset();
+    this.reset();
   }
   
   reset(){
-    // this function should reset the form 
+    // this function should reset the form
+    document.querySelector('form').reset();
   }
   
 }
